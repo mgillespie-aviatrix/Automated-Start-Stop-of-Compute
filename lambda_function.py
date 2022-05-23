@@ -16,7 +16,7 @@ def lambda_handler(event,context):
 
     #Check received JSON payload to determine requested action (start or stop ec2 instances)
     action = event.get('operation')
-    print("IT IS x%sx " % action)
+    
     if action is None:
         response_dict["status_code"] = 400
         response_dict["message"] = "No operation received"
